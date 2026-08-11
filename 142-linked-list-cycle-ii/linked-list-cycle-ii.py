@@ -3,8 +3,6 @@ class Solution(object):
 
         slow = head
         fast = head
-
-        # Find whether a cycle exists
         while fast and fast.next:
 
             slow = slow.next
@@ -13,11 +11,8 @@ class Solution(object):
             if slow == fast:
                 break
 
-        # No cycle
         if not fast or not fast.next:
             return None
-
-        # Find the starting node of cycle
         slow = head
 
         while slow != fast:
